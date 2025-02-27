@@ -45,11 +45,53 @@
 
 # Exercice 6: Déclarer un chiffre positif ou négatif, si il est positif afficher Positif sinon affiché Négatif.
 
-chiffre = 0
+#chiffre = 0
 
-chiffre = int(input("Donnez un chiffre positif ou négatif ?"))
+#chiffre = int(input("Donnez un chiffre positif ou négatif ?"))
 
-if chiffre >= 0:
-    print("Positif")
-else :
-    print("négatif")
+#if chiffre >= 0:
+    #print("Positif")
+#else :
+    #print("négatif")
+
+# Exercice 7: Créer une variable pour demander l'age, vérifier si l'utilisateur est mineur ou majeur , puis afficher le résultat dans la console.
+
+#age = int(input("Quel age avez-vous ?   "))
+
+#if age >= 18 : 
+    #print("Vous êtes majeur !")
+#else:
+    #print("Vous êtes mineur..")
+
+# Exercice 8: Ecrire deux programmes pour afficher des nombre de 1 à 20, l'un avec une boucle while l'autre avec une boucle for
+
+# version while
+#compteur = 1
+
+#while compteur <= 20:
+
+    #print (compteur)
+    #compteur += 1
+
+# version for
+
+#for i in range(1,21):
+    #print(i)
+
+# Exercice 9: comme l'exercice 8 mais en affichant les nombres impaires
+
+# version while
+#compteur = 1
+
+#while compteur <= 21:
+
+    #if compteur % 2 == 1:
+        #print (compteur)
+    #compteur += 1
+
+# version for
+
+#for i in range(1,21):
+    #if i % 2 == 1:
+        #print(i)
+    
