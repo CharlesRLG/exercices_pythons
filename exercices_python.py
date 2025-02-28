@@ -94,4 +94,19 @@
 #for i in range(1,21):
     #if i % 2 == 1:
         #print(i)
-    
+
+# Exercice 10: création d'une liste par compreension
+
+#liste = [i for i in range (1,11)]
+#print (liste)
+
+# Exercice 11: création d'une liste par nombre paire
+
+#liste = [i for i in range (1,21) if i % 2 == 0]
+#print(liste)
+
+# Exercice 12: Trier la liste l contenant [8,6,3,4,1,12,2,9.2], puis afficher la liste.
+
+l = [8,6,3,4,1,12,2,9.2]
+liste = sorted(l)
+print(liste)
