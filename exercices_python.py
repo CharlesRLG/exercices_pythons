@@ -107,6 +107,31 @@
 
 # Exercice 12: Trier la liste l contenant [8,6,3,4,1,12,2,9.2], puis afficher la liste.
 
-l = [8,6,3,4,1,12,2,9.2]
-liste = sorted(l)
-print(liste)
+#l = [8,6,3,4,1,12,2,9.2]
+#liste = sorted(l)
+#print(liste)
+
+# Exercice 13: écrire le nombre d'occurrence du nombre 1 de la liste l
+
+#l = [3,2,2,1,9,1,2,3,7]
+
+#print(l.count(1))
+
+# Exercice 14: Ajout d'élément à une liste
+
+#l = []
+
+#l += [10,25,30,45,90,"ab","cd","ef"]
+
+#print(l)
+
+# Exercice 15: Compréhension de liste
+
+L = [1,2,3,4,5,6,7,8,9,10]
+
+L1 = []
+
+for i in range(len(L)):
+    if i%3 == 0:
+        L1.append(L[i])
+print(L1)
