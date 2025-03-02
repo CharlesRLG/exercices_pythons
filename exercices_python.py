@@ -127,11 +127,34 @@
 
 # Exercice 15: Compréhension de liste
 
-L = [1,2,3,4,5,6,7,8,9,10]
+#L = [1,2,3,4,5,6,7,8,9,10]
 
-L1 = []
+#L1 = []
 
-for i in range(len(L)):
-    if i%3 == 0:
-        L1.append(L[i])
-print(L1)
+#for i in range(len(L)):
+    #if i%3 == 0:
+        #L1.append(L[i])
+#print(L1)
+
+# Exercice 16: Trer une chaine de caractère
+
+#c = "france"
+
+#print(sorted(c))
+
+# Exercice 17: Elements en commun entre deux listes
+
+#L1 = [9,8,7,14,3,2,"a","p","bonjour","b"]
+#L2 = ["b", 1, 9.2, 6, 3, 9, "p"]
+#L3 = set(L1).intersection(set(L2))
+#L3 = list(L3)
+
+#print(L3)
+
+# Exercice 18: Trier une liste de tuple
+
+L = [("Pomme", 15), ("Banane", 8), ("Fraise", 12), ("Kiwi", 9), ("Peche", 2)]
+
+L.sort(key = lambda x : x[1])
+
+print (L)
