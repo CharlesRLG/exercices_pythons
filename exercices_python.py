@@ -153,8 +153,29 @@
 
 # Exercice 18: Trier une liste de tuple
 
-L = [("Pomme", 15), ("Banane", 8), ("Fraise", 12), ("Kiwi", 9), ("Peche", 2)]
+#L = [("Pomme", 15), ("Banane", 8), ("Fraise", 12), ("Kiwi", 9), ("Peche", 2)]
 
-L.sort(key = lambda x : x[1])
+#L.sort(key = lambda x : x[1])
 
-print (L)
+#print (L)
+
+# Exercice 19: Inverser une chaine
+
+#ch = "Bonjour tout le monde"
+
+#ch_inverse = ch[::-1]
+
+#print (ch_inverse)
+
+# Exercice 20: Les valeurs d'un dictionnaire
+
+#d = {"Pomme":3, "Banane":7, "Kiwi":1}
+
+#print(d["Pomme"])
+#print(d["Banane"])
+
+# Exercice 21: Somme des valeurs d'un dictionnaire
+
+d = {"Pomme":3, "Banane":7, "Fraise":12, "Kiwi":1, "Peche":2}
+
+sum(d.values())
