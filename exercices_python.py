@@ -176,6 +176,29 @@
 
 # Exercice 21: Somme des valeurs d'un dictionnaire
 
-d = {"Pomme":3, "Banane":7, "Fraise":12, "Kiwi":1, "Peche":2}
+#d = {"Pomme":3, "Banane":7, "Fraise":12, "Kiwi":1, "Peche":2}
 
-sum(d.values())
+#sum(d.values())
+
+# Exercice 22: Utilisation de la méthode format()
+
+#nombre = float("{:.2f}".format(187.632587))
+
+#print(nombre)
+
+# Exercice 23: Autre utilisation de la méthode format()
+
+#monNom = "Charles"
+#age = 33
+#nomLangage = "Python"
+
+#phrase = f"Je m'appelle {monNom} et j'ai {age} ans. J'apprends le langage {nomLangage}".format(monNom,age,nomLangage)
+
+#print(phrase)
+
+#Exercice 24: afficher une table de multiplication
+
+choixDuChiffre = int(input("Quel table voulez-vous voir ?  "))
+
+for i in range (0,11):
+    print(f"{choixDuChiffre} x" ,i,"=", choixDuChiffre*i)
