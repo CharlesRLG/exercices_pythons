@@ -198,7 +198,32 @@
 
 #Exercice 24: afficher une table de multiplication
 
-choixDuChiffre = int(input("Quel table voulez-vous voir ?  "))
+#choixDuChiffre = int(input("Quel table voulez-vous voir ?  "))
 
-for i in range (0,11):
-    print(f"{choixDuChiffre} x" ,i,"=", choixDuChiffre*i)
+#for i in range (0,11):
+    #print(f"{choixDuChiffre} x" ,i,"=", choixDuChiffre*i)
+
+# Exercice 25: Ecrire un programme affichant le dossier dans lequel il se trouve
+
+#import os
+#print(os.getcwd())
+
+# Exercice 26: Suprimer un élément d'une liste
+
+#liste = [1,2,3,4,5]
+
+#liste.pop(0)
+
+#print(liste)
+
+# Exercice 27: Récupérer l'extension d'un fichier
+
+#import os
+#chemin_fichier = r'C:\Users\Charles\Documents\exercices_python\exercices_python.py'
+## récupérer le nom du fichier i.e exercices_python.py
+#nom_fichier = os.path.basename(chemin_fichier)
+## convertir le nom du fichier en liste, puis on récupère
+## le dernier élément de cette liste qui représente
+## l'estension 
+#extension_fichier = nom_fichier.split(".")[-1]
+#print("Extension fichier : ", extension_fichier)
