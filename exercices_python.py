@@ -227,3 +227,43 @@
 ## l'estension 
 #extension_fichier = nom_fichier.split(".")[-1]
 #print("Extension fichier : ", extension_fichier)
+
+# Exercice 28: calculer le temps d'execution d'un script
+
+#import time
+
+## Stocker le temps de début
+## du programe
+#debut = time.time()
+
+##### LE CODE #####
+#for i in range(0,11):
+    #print("8 x", i ,"=", 8*i)
+######################
+
+## Stocker le temps de fin de programme
+
+#fin = time.time()
+
+## Calculer le temps d'exécution
+
+#print("Temps d'exécution du code : ", fin-debut)
+
+# Exercice 29: Ecrire un programme qui permet de mélanger aléatoirement les éléments d'une liste
+
+#import random
+
+#L = [3,6,8,7,2,"s","ch","d"]
+#print(L)
+
+#random.shuffle(L)
+#print(L)
+
+# Exercice 30: Générer aléatoirement un nombre entre 20 et 30
+
+import random
+
+nombre_aleatoire = random.randint(20,30)
+
+print(nombre_aleatoire)
+
