@@ -261,9 +261,29 @@
 
 # Exercice 30: Générer aléatoirement un nombre entre 20 et 30
 
-import random
+#import random
 
-nombre_aleatoire = random.randint(20,30)
+#nombre_aleatoire = random.randint(20,30)
 
-print(nombre_aleatoire)
+#print(nombre_aleatoire)
 
+# Exercice 31: Affichege de motifs
+
+#for i in range(8):
+    #for y in range(5,21):
+        #print(y, end = " ")
+    #print()
+
+# Exercice 32: 
+
+#L = [3,6,9,12,15,18,21,24]
+
+#L1 = [l/3 for l in L]
+#print (L1)
+
+# Exercice 33:
+
+L = [-6.5,-3,-1,2,8,-3.6]
+
+L1 = [l for l in L if l>0]
+print (L1)
