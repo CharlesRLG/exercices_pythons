@@ -283,7 +283,39 @@
 
 # Exercice 33:
 
-L = [-6.5,-3,-1,2,8,-3.6]
+#L = [-6.5,-3,-1,2,8,-3.6]
 
-L1 = [l for l in L if l>0]
-print (L1)
+#L1 = [l for l in L if l>0]
+#print (L1)
+
+# Exercice 34: fonction mathématique
+
+#def f(a,b,x):
+
+    #return a*(x**3)+2*a*(x**2)+b
+
+#print(f(3,0,1))
+#print(f(0,2,2))
+
+# Exercice 35: présence d'un élément dans une liste
+
+#def VerifPresence(a,L):
+    #if a in L:
+        #return True
+    #else:
+        #return False
+    
+#print (VerifPresence(2,[1,2,3,4,5,6]))
+#print (VerifPresence(-1,[3,6,9,7,"abcr"]))
+
+# Exercice 36: Calcule de la somme des chiffre
+
+nombre = int(input("entrer un nombre : "))
+
+nombre = str(nombre)
+somme = 0
+
+for chiffre in nombre:
+    somme += int(chiffre)
+
+print(f"La somme des chiffre de {nombre} est : {somme}")
