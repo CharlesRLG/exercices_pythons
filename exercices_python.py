@@ -310,12 +310,47 @@
 
 # Exercice 36: Calcule de la somme des chiffre
 
-nombre = int(input("entrer un nombre : "))
+#nombre = int(input("entrer un nombre : "))
 
-nombre = str(nombre)
-somme = 0
+#nombre = str(nombre)
+#somme = 0
 
-for chiffre in nombre:
-    somme += int(chiffre)
+#for chiffre in nombre:
+    #somme += int(chiffre)
 
-print(f"La somme des chiffre de {nombre} est : {somme}")
+#print(f"La somme des chiffre de {nombre} est : {somme}")
+
+# Exercice 37: Somme d'une liste
+
+#def calculSomme(L):
+    #somme = 0
+    #for nombre in L:
+        #somme += nombre
+    #return somme
+
+#print (calculSomme([3,2,6,9,-1.5]))
+#print (calculSomme([-3,-6,0,1,2,7]))
+
+# Exercie 38: Suppression des doublons
+
+#def supprimerDoublons(L):
+    #for element in L:
+        #elementDoublon = L.count(element)
+        #if elementDoublon >= 2:
+            #for i in range(elementDoublon-1):
+                #L.remove(element)
+
+    #L.sort()
+    #return L
+
+#print(supprimerDoublons([0,3,5,7,3,5,1,-1]))
+#print(supprimerDoublons([0,5,9,10,3.2,1,-3]))
+
+# Exercice 39: Ajout d'éléments dans un dictionnaire
+
+def ajoutElementDict(cle,valeur,d):
+    d[cle] = valeur
+    return d
+
+print(ajoutElementDict("baptiste",29,{"julien":14,"laurent":31}))
+print(ajoutElementDict("poids", 65.3,{}))
