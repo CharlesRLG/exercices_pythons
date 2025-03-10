@@ -348,9 +348,50 @@
 
 # Exercice 39: Ajout d'éléments dans un dictionnaire
 
-def ajoutElementDict(cle,valeur,d):
-    d[cle] = valeur
-    return d
+#def ajoutElementDict(cle,valeur,d):
+    #d[cle] = valeur
+    #return d
 
-print(ajoutElementDict("baptiste",29,{"julien":14,"laurent":31}))
-print(ajoutElementDict("poids", 65.3,{}))
+#print(ajoutElementDict("baptiste",29,{"julien":14,"laurent":31}))
+#print(ajoutElementDict("poids", 65.3,{}))
+
+# Exercice 40: Recréaton de la fonction max
+
+#def maximum(L):
+    #max_L=L[0]
+    #for element in L:
+        #if element > max_L:
+            #max_L = element
+    #return max_L
+
+#print(maximum([-9,2,4,1,8]))
+#print(maximum([-3,1,7,2,3]))
+
+# Exercice 41: Somme d'une sous liste
+
+#def sommeSousListe(L,i,j):
+    ## Sélectionner la sous liste
+    #lij = L[i:j+1]
+    ## Initialiser la variable où on va stocker la somme
+    #somme = 0
+
+    #for element in lij:
+        #somme += element
+    #return somme
+
+#print(sommeSousListe([4,10,12,16,18],2,4))
+#print(sommeSousListe([2,4,6,8,10,12],0,2))
+
+# Exercice 42: Création de motifs
+
+#x = 0
+#while x <= 6:
+    #print ("*"*x)
+    #x += 1
+
+## ou 
+
+for nombreEtoile in range(1,11):
+    if nombreEtoile%2 == 0 or nombreEtoile == 1:
+        print("*"*nombreEtoile)
+
