@@ -391,7 +391,41 @@
 
 ## ou 
 
-for nombreEtoile in range(1,11):
-    if nombreEtoile%2 == 0 or nombreEtoile == 1:
-        print("*"*nombreEtoile)
+#for nombreEtoile in range(1,11):
+    #if nombreEtoile%2 == 0 or nombreEtoile == 1:
+        #print("*"*nombreEtoile)
 
+# Exercice 43: Recréation de la fonction Min
+
+#def minimum(L):
+    #min_L=L[0]
+    #for element in L:
+        #if element < min_L:
+            #min_L = element
+    #return min_L
+
+#print(minimum([-9,2,4,1,8]))
+#print(minimum([1,7,6,2,3,-3,-12]))
+
+# Exercice 44: Recréation de la fonction Len
+
+#def longueur(L):
+    #taille_L = 0
+    #for element in L:
+        #taille_L +=1
+    #return taille_L
+
+#print(longueur([3,6,7,"abde",[1,3,57],True]))
+#print(longueur([]))
+
+# Exercice 45: Calcul de la moyenne d'une liste
+
+def moyenneList(L):
+    somme_L = 0
+    for element in L:
+        somme_L += element
+    moyenne_L = somme_L / len(L)
+    return moyenne_L
+
+print(moyenneList([1,2,3,4,5,6,7]))
+print(moyenneList([3,0,-1,5,6,9,17]))
