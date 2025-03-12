@@ -420,12 +420,48 @@
 
 # Exercice 45: Calcul de la moyenne d'une liste
 
-def moyenneList(L):
-    somme_L = 0
-    for element in L:
-        somme_L += element
-    moyenne_L = somme_L / len(L)
-    return moyenne_L
+#def moyenneList(L):
+    #somme_L = 0
+    #for element in L:
+        #somme_L += element
+    #moyenne_L = somme_L / len(L)
+    #return moyenne_L
 
-print(moyenneList([1,2,3,4,5,6,7]))
-print(moyenneList([3,0,-1,5,6,9,17]))
+#print(moyenneList([1,2,3,4,5,6,7]))
+#print(moyenneList([3,0,-1,5,6,9,17]))
+
+# Exercice 46: Les diviseurs d'un nombre entiers
+
+#def diviseur(n):
+    ## la liste qui va contenir tous les diviseur
+    #n_diviseur = []
+    ## parcourir tous les éléments de 1 à n
+    #for div in range(1,n+1):
+        ## si le reste de la division de n par div est 0
+        #if n%div == 0:
+            ## alors div est un diviseur de n
+            ## et on le rajoute dans la liste des diviseurs
+            #n_diviseur.append(div)
+    #return n_diviseur
+
+#print(diviseur(3))
+#print(diviseur(9))
+
+# Exercice 47: Vérification de majuscule
+
+#def verifMaj(phrase):
+    #for lettre in phrase:
+        #if lettre.isupper():
+            #return True
+    #return False
+
+#print(verifMaj("Les légumes sont bon pour la santé"))
+#print(verifMaj("j'apprends le langage java"))
+
+# Exercice 48: Concaténation de liste
+
+def concateListe(L1,L2,L3):
+    L_concate = L1+L2+L3
+    return L_concate
+
+print(concateListe([0,9,8],[2,6,9],[True,False,"abc"]))
