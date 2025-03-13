@@ -460,8 +460,58 @@
 
 # Exercice 48: Concaténation de liste
 
-def concateListe(L1,L2,L3):
-    L_concate = L1+L2+L3
-    return L_concate
+#def concateListe(L1,L2,L3):
+    #L_concate = L1+L2+L3
+    #return L_concate
 
-print(concateListe([0,9,8],[2,6,9],[True,False,"abc"]))
+#print(concateListe([0,9,8],[2,6,9],[True,False,"abc"]))
+
+# Exercice 49: Calcule du nombre de valeur d'un dictionnaire
+
+#def nbrValeurDict(d):
+    ## extraire la liste des clés
+    ## dans le dictionnaire
+    #d_cle = list(d.keys())
+    ## initialisation de la variable
+    ## qui va contenir le nombre de valeur
+    ## du dictionnaire d
+    #nombre_valeur = 0
+    ## parcourir toutes les clés
+    #for cle in d_cle:
+        ## pour chaque clé, déterminer le nombre
+        ## de valeur contenus dans la liste associée
+        ## à cette clé
+        #longueur_val = len(d[cle])
+        ##ajouter ce nombre de valeur à la variable nombre_valeur
+        #nombre_valeur += longueur_val
+    #return nombre_valeur
+
+#print(nbrValeurDict({"a":[1,2,3],"b":[3,"p"],"c":[8]}))
+
+# Exercice 50: Concaténation de dictionnaire
+
+#def concatDict(d1,d2):
+    #d1.update(d2)
+    #return d1
+
+#print(concatDict({"a":3,"b":6},{"c":2,"d":-1}))
+
+# Exercice 51: Calcul de la factorielle d'un nombre
+
+def calculeFactorielle(n):
+    ## factoriel de n = n x (n-1) x (n-2) x ..... x 2 x 1
+
+    ## la factorielle du nombre 0 = 1
+    if n == 0:
+        return 1
+    ## la variable qui va contenir
+    ## notre résultat final
+    resultat_factoriel = n
+    ## on parcours tous les éléments de n-1 à 1
+    for k in range(n-1,0,-1):
+        resultat_factoriel = resultat_factoriel * k
+    return resultat_factoriel
+
+print(calculeFactorielle(0))
+print(calculeFactorielle(9))
+print(calculeFactorielle(3))
