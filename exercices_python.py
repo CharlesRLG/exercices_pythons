@@ -498,20 +498,61 @@
 
 # Exercice 51: Calcul de la factorielle d'un nombre
 
-def calculeFactorielle(n):
+#def calculeFactorielle(n):
     ## factoriel de n = n x (n-1) x (n-2) x ..... x 2 x 1
 
     ## la factorielle du nombre 0 = 1
-    if n == 0:
-        return 1
+    #if n == 0:
+        #return 1
     ## la variable qui va contenir
     ## notre résultat final
-    resultat_factoriel = n
+    #resultat_factoriel = n
     ## on parcours tous les éléments de n-1 à 1
-    for k in range(n-1,0,-1):
-        resultat_factoriel = resultat_factoriel * k
-    return resultat_factoriel
+    #for k in range(n-1,0,-1):
+        #resultat_factoriel = resultat_factoriel * k
+    #return resultat_factoriel
 
-print(calculeFactorielle(0))
-print(calculeFactorielle(9))
-print(calculeFactorielle(3))
+#print(calculeFactorielle(0))
+#print(calculeFactorielle(9))
+#print(calculeFactorielle(3))
+
+# Exercice 52: Diviseurs & multiple
+
+#def diviseurMult(n,a,nbrSeuil):
+    #resultat = []
+    ## Parcourir les nombres de 0 et nbrSeuil
+    #for nbr in range(nbrSeuil+1):
+        ## le reste de la division de nbr par n doit être égale à 0
+        ## et le reste de la division de nbr par a doit être différente de 0
+        #if nbr%n == 0 and nbr%a != 0:
+            ## si les conditions sont satisfaites, alors
+            #resultat.append(nbr)
+    #return resultat
+
+#print(diviseurMult(5,2,100))
+#print(diviseurMult(11,3,85))
+
+# Exercice 53: Présence d'une voyelle dans une chaine
+
+#def presenceVoyelle(phrase):
+    ## la liste des voyelles
+    #voyelles = ["a","e","i","o","u","y"]
+    ## parcourir toutes les voyelles dans la phrase passé
+    #for voyelle in voyelles:
+        ## si la voyelle existe dans la phrase passée en paramètres
+        #if voyelle in phrase:
+            #return True
+    #return False
+
+#print(presenceVoyelle("Je vais prendre ma douche"))
+#print(presenceVoyelle("rbhpm"))
+
+# Exercice 54: Suppression des espaces dans une phrase
+
+def supprEspace(phrase):
+    L_phrase = phrase.split(" ")
+    phraseSansEspace = "".join(L_phrase)
+    return phraseSansEspace
+
+print(supprEspace("La france est belle"))
+print(supprEspace("Je vais prendre mon vélo"))
