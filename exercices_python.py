@@ -549,10 +549,58 @@
 
 # Exercice 54: Suppression des espaces dans une phrase
 
-def supprEspace(phrase):
-    L_phrase = phrase.split(" ")
-    phraseSansEspace = "".join(L_phrase)
-    return phraseSansEspace
+#def supprEspace(phrase):
+    #L_phrase = phrase.split(" ")
+    #phraseSansEspace = "".join(L_phrase)
+    #return phraseSansEspace
 
-print(supprEspace("La france est belle"))
-print(supprEspace("Je vais prendre mon vélo"))
+#print(supprEspace("La france est belle"))
+#print(supprEspace("Je vais prendre mon vélo"))
+
+# Exercice 55: Position d'un élément dans une liste
+
+#def positionEltListe(L,x):
+    #x_indices = []
+    #for i in range(len(L)):
+        ## si un élément de L est égale à i
+        #if L[i] == x:
+            ## ajouter son index à la liste des indices
+            #x_indices.append(i)
+    ## si la liste est vide, x n'existe pas dans L
+    #if len(x_indices) == 0:
+        #print("L'élément ",x," n'éxiste pas dans la liste ",L)
+    #return x_indices
+
+#print(positionEltListe([1,2,3,6,8,7,3],3))
+#print(positionEltListe([6,8,9,1,3,7],-1))
+
+# Exercice 56: Filtrer les mots suivant leur longueur
+
+#def filtrerMots(phrase,longueurMini):
+    ## convertir la phrase en utilisant comme séparateur un "espace"
+    #phrase_liste = phrase.split(" ")
+    ## variable qui va contenir la phrase filtré
+    #phrase_filtre =[]
+
+    #for mot in phrase_liste:
+        #if len(mot) >= longueurMini:
+            ## alors on ajoute ce mot à notre nouvelle liste
+            #phrase_filtre.append(mot)
+    ## convertir la liste en chaine de caractère en gardant un espace entre les mots
+    #phrase_filtre = " ".join(phrase_filtre)
+    #return phrase_filtre
+
+#print(filtrerMots("Salut toi !", 4))
+#print(filtrerMots("Quel est ton origine ?", 5))
+
+# Exercice 57: Inverser l'ordre des mots
+
+def inverserPhrase(phrase):
+
+    phrase_liste = phrase.split(" ")
+    phrase_liste.reverse()
+    phrase = " ".join(phrase_liste)
+    return phrase
+
+print(inverserPhrase("Bonjour tout le monde ! ça va ?"))
+print(inverserPhrase("Pomme de pin, pomme de terre"))
