@@ -595,12 +595,65 @@
 
 # Exercice 57: Inverser l'ordre des mots
 
-def inverserPhrase(phrase):
+#def inverserPhrase(phrase):
 
-    phrase_liste = phrase.split(" ")
-    phrase_liste.reverse()
-    phrase = " ".join(phrase_liste)
-    return phrase
+    #phrase_liste = phrase.split(" ")
+    #phrase_liste.reverse()
+    #phrase = " ".join(phrase_liste)
+    #return phrase
 
-print(inverserPhrase("Bonjour tout le monde ! ça va ?"))
-print(inverserPhrase("Pomme de pin, pomme de terre"))
+#print(inverserPhrase("Bonjour tout le monde ! ça va ?"))
+#print(inverserPhrase("Pomme de pin, pomme de terre"))
+
+# Exercice 58: Nombre d'occurence dans une liste
+
+#def nombreOccurrence(L):
+
+    #resultat_tuples = []
+
+    #for element in L:
+        #nombre_occurrence = L.count(element)
+        #tuple_element = (element,nombre_occurrence)
+
+        #if tuple_element not in resultat_tuples:
+            #resultat_tuples.append(tuple_element)
+    #return resultat_tuples
+
+#print(nombreOccurrence([-4,8,-3,2,1,2,7,9,-3,8,1]))
+#print(nombreOccurrence(["a",3,4,"b","a",3]))
+
+# Exercice 59: Union de liste sans duplication
+
+#def unionListe(L1,L2,L3):
+
+    #ens1 = set(L1)
+    #ens2 = set(L2)
+    #ens3 = set(L3)
+
+    #unionEnsemble = ens1 | ens2 | ens3 
+
+    #l_union = list(unionEnsemble)
+    #l_union.sort()
+
+    #return l_union
+
+#print(unionListe([3,6,9,3],[1,0,3],[12,6,0]))
+
+# Exercice 60: Calcule du PGDC ( Plus Grand Diviseur Commun)
+
+def calculePGDC(a,b):
+    ## Vérifier si les 2 paramètres a et b sont positifs
+    ## Si ce n'est pas le cas, retourner une erreur
+    assert(a>0 and b>0)
+    ## tant que b est différent de 0
+    while b != 0:
+        ## double affectation
+        ## "a" on lui affecte "b"
+        ## "b" on lui affecte le "reste de a divisé par b"
+        a,b = b, a%b
+    ## on retourne "a" à la fin
+    return a
+
+
+print(calculePGDC(3,5))
+print(calculePGDC(5,15))
