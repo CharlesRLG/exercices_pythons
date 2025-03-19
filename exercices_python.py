@@ -641,19 +641,33 @@
 
 # Exercice 60: Calcule du PGDC ( Plus Grand Diviseur Commun)
 
-def calculePGDC(a,b):
+#def calculePGDC(a,b):
     ## Vérifier si les 2 paramètres a et b sont positifs
     ## Si ce n'est pas le cas, retourner une erreur
-    assert(a>0 and b>0)
+    #assert(a>0 and b>0)
     ## tant que b est différent de 0
-    while b != 0:
+    #while b != 0:
         ## double affectation
         ## "a" on lui affecte "b"
         ## "b" on lui affecte le "reste de a divisé par b"
-        a,b = b, a%b
+        #a,b = b, a%b
     ## on retourne "a" à la fin
-    return a
+    #return a
 
 
-print(calculePGDC(3,5))
-print(calculePGDC(5,15))
+#print(calculePGDC(3,5))
+#print(calculePGDC(5,15))
+
+# Exercice 61: lecture d'un fichier
+
+def lireFichier(cheminFichier):
+    ## ouverture du fichier en mode lecture
+    fichier = open(cheminFichier,"r")
+    ## Lecture du contenu du fichier
+    contenu = fichier.read()
+    ## fermeture du fichier
+    fichier.close()
+    ## retourner le contenu du fichier
+    return contenu
+
+lireFichier(r"C:\Users\Charles\Documents\exercices_python\test.txt")
