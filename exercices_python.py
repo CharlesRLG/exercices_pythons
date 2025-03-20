@@ -660,14 +660,36 @@
 
 # Exercice 61: lecture d'un fichier
 
-def lireFichier(cheminFichier):
+#def lireFichier(cheminFichier):
     ## ouverture du fichier en mode lecture
-    fichier = open(cheminFichier,"r")
+    #fichier = open(cheminFichier,"r")
     ## Lecture du contenu du fichier
-    contenu = fichier.read()
+    #contenu = fichier.read()
     ## fermeture du fichier
-    fichier.close()
+    #fichier.close()
     ## retourner le contenu du fichier
-    return contenu
+    #return contenu
 
-lireFichier(r"C:\Users\Charles\Documents\exercices_python\test.txt")
+#lireFichier(r"C:\Users\Charles\Documents\exercices_python\test.txt")
+
+# Exercice 62: Nombre d'occurence d'un mot dans un fichier
+
+def nbrOccFichier(cheminFichier,mot):
+    ## ouverture d'un fichier en mode lecture
+    fichier = open(cheminFichier, "r")
+    ## lecture de tout le contenu
+    contenu = fichier.read()
+    ## convertir le contenu du fichier en liste de mots
+    liste_mots = contenu.split(" ")
+    ## initialiser la variable qui stock l'occurence du mot
+    occ_mot = 0
+    ## parcourir tous les mots dans la liste
+    for element in liste_mots:
+        ## si l'élément de la liste est égale au mot recherché
+        if element == mot:
+            ## incrémenté occ_mot de 1
+            occ_mot += 1
+    return occ_mot
+
+print (nbrOccFichier(r"C:\Users\Charles\Documents\exercices_python\test.txt","je"))
+
