@@ -674,22 +674,40 @@
 
 # Exercice 62: Nombre d'occurence d'un mot dans un fichier
 
-def nbrOccFichier(cheminFichier,mot):
+#def nbrOccFichier(cheminFichier,mot):
     ## ouverture d'un fichier en mode lecture
-    fichier = open(cheminFichier, "r")
+    #fichier = open(cheminFichier, "r")
     ## lecture de tout le contenu
-    contenu = fichier.read()
+    #contenu = fichier.read()
     ## convertir le contenu du fichier en liste de mots
-    liste_mots = contenu.split(" ")
+    #liste_mots = contenu.split(" ")
     ## initialiser la variable qui stock l'occurence du mot
-    occ_mot = 0
+    #occ_mot = 0
     ## parcourir tous les mots dans la liste
-    for element in liste_mots:
+    #for element in liste_mots:
         ## si l'élément de la liste est égale au mot recherché
-        if element == mot:
+        #if element == mot:
             ## incrémenté occ_mot de 1
-            occ_mot += 1
-    return occ_mot
+            #occ_mot += 1
+    #return occ_mot
 
-print (nbrOccFichier(r"C:\Users\Charles\Documents\exercices_python\test.txt","je"))
+#print (nbrOccFichier(r"C:\Users\Charles\Documents\exercices_python\test.txt","je"))
 
+# Exercice 63: Supprimer un caractère d'un fichier
+
+#def suppCarac(cheminFichier, caractere):
+    ## L'utilisation de la syntaxe with open permet de fermer automatiquement le fichier
+    #with open(cheminFichier, "r") as fichier:
+      #contenu = fichier.read()
+    ## remplacer le caractère par un vide
+    #nouveau_contenu = contenu.replace(caractere, "")
+
+    ## ouverture du fichier en écriture
+    #with open(cheminFichier, "w") as fichier:
+      ## écrire le nouveau contenu
+      #fichier.write(nouveau_contenu)
+    
+    #return
+
+
+#print(suppCarac(r"C:\Users\Charles\Documents\exercices_python\test.txt", ","))
