@@ -711,3 +711,18 @@
 
 
 #print(suppCarac(r"C:\Users\Charles\Documents\exercices_python\test.txt", ","))
+
+# Exercice 64: présence d'un nombre dans un fichier
+
+def presenceNombre(cheminFichier):
+    fichier = open(cheminFichier, "r")
+    contenu = fichier.read()
+
+    for c in contenu:
+        ## vérifier le caractère
+        if c.isdigit():
+            return True
+    return False    
+
+
+print(presenceNombre(r"C:\Users\Charles\Documents\exercices_python\test.txt"))
