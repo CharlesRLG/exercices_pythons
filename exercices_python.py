@@ -714,15 +714,34 @@
 
 # Exercice 64: présence d'un nombre dans un fichier
 
-def presenceNombre(cheminFichier):
-    fichier = open(cheminFichier, "r")
-    contenu = fichier.read()
+#def presenceNombre(cheminFichier):
+    #fichier = open(cheminFichier, "r")
+    #contenu = fichier.read()
 
-    for c in contenu:
+    #for c in contenu:
         ## vérifier le caractère
-        if c.isdigit():
-            return True
-    return False    
+        #if c.isdigit():
+            #return True
+    #return False    
 
 
-print(presenceNombre(r"C:\Users\Charles\Documents\exercices_python\test.txt"))
+#print(presenceNombre(r"C:\Users\Charles\Documents\exercices_python\test.txt"))
+
+# Exercice 65: Nombre de fichier dans un dossier
+
+import os
+
+def nombreFichier(cheminDossier):
+    ## initiaisation du compteur
+    nombre_fichier = 0
+    ## lister tout le contenu du dossier
+    listing_contenu = os.listdir(cheminDossier)
+    ## Parcourir le contenu du dossier
+    for contenu in listing_contenu:
+        ## si le contenu est un fichier
+        if os.path.isfile(os.path.join(cheminDossier, contenu)):
+            ## Incrémenter la variable nombre_fichier
+            nombre_fichier += 1
+    return nombre_fichier
+
+print(nombreFichier(r"C:\Users\Charles\Documents\exercices_python"))
