@@ -729,19 +729,34 @@
 
 # Exercice 65: Nombre de fichier dans un dossier
 
-import os
+#import os
 
-def nombreFichier(cheminDossier):
+#def nombreFichier(cheminDossier):
     ## initiaisation du compteur
-    nombre_fichier = 0
+    #nombre_fichier = 0
     ## lister tout le contenu du dossier
-    listing_contenu = os.listdir(cheminDossier)
+    #listing_contenu = os.listdir(cheminDossier)
     ## Parcourir le contenu du dossier
-    for contenu in listing_contenu:
+    #for contenu in listing_contenu:
         ## si le contenu est un fichier
-        if os.path.isfile(os.path.join(cheminDossier, contenu)):
+        #if os.path.isfile(os.path.join(cheminDossier, contenu)):
             ## Incrémenter la variable nombre_fichier
-            nombre_fichier += 1
-    return nombre_fichier
+            #nombre_fichier += 1
+    #return nombre_fichier
 
-print(nombreFichier(r"C:\Users\Charles\Documents\exercices_python"))
+#print(nombreFichier(r"C:\Users\Charles\Documents\exercices_python"))
+
+# Exercice 66: Ecrire dans un fichier
+
+def ecrireFicher(cheminFichier, texte):
+    ## ouverture d'un fichier en écriture
+    f = open(cheminFichier,"w")
+    ##écriture du texte placé en paramètre dans le fichier
+    f.write(texte)
+    ## fermeture
+    f.close()
+
+monChemin = r"C:\Users\Charles\Documents\exercices_python\test.txt"
+monTexte = "J'apprend Python !"
+
+ecrireFicher(monChemin, monTexte)
