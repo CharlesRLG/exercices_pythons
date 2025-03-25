@@ -748,15 +748,36 @@
 
 # Exercice 66: Ecrire dans un fichier
 
-def ecrireFicher(cheminFichier, texte):
+#def ecrireFicher(cheminFichier, texte):
     ## ouverture d'un fichier en écriture
-    f = open(cheminFichier,"w")
+    #f = open(cheminFichier,"w")
     ##écriture du texte placé en paramètre dans le fichier
-    f.write(texte)
+    #f.write(texte)
     ## fermeture
-    f.close()
+    #f.close()
 
-monChemin = r"C:\Users\Charles\Documents\exercices_python\test.txt"
-monTexte = "J'apprend Python !"
+#monChemin = r"C:\Users\Charles\Documents\exercices_python\test.txt"
+#monTexte = "J'apprend Python !"
 
-ecrireFicher(monChemin, monTexte)
+#ecrireFicher(monChemin, monTexte)
+
+# Exercice 67: La clé avec le nombre de valeur unique maximale
+
+def cleMaxValeurDict(d):
+    cle_val = []
+    ## listing des clées du dictionnaire
+    d_cles = list(d.keys())
+    ## Parcourir toutes les clé du dictionnaire
+    for cle in d_cles:
+        ## Le nombre de valeur associé à la clé sans compter les doublons
+        nombre_valeurs_unique = len(set(d[cle]))
+        ##ajouter le tuple (cle, nombre valeur unique)
+        cle_val.append((cle, nombre_valeurs_unique))
+
+    ## tier suivant le 2eme élément au tuple
+    cle_val.sort(key = lambda x : x[1])
+    ##Extraire la clé ayant le nombre maximal
+    cle_max_val = cle_val[-1][0]
+    return cle_max_val
+
+print(cleMaxValeurDict({"a":[9,10,9,7,3,1],"b":[5,3,2,2,2],"c":[1,1,1,1,1,1,8,2]}))
