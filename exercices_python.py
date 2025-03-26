@@ -763,21 +763,35 @@
 
 # Exercice 67: La clé avec le nombre de valeur unique maximale
 
-def cleMaxValeurDict(d):
-    cle_val = []
+#def cleMaxValeurDict(d):
+    #cle_val = []
     ## listing des clées du dictionnaire
-    d_cles = list(d.keys())
+    #d_cles = list(d.keys())
     ## Parcourir toutes les clé du dictionnaire
-    for cle in d_cles:
+    #for cle in d_cles:
         ## Le nombre de valeur associé à la clé sans compter les doublons
-        nombre_valeurs_unique = len(set(d[cle]))
+        #nombre_valeurs_unique = len(set(d[cle]))
         ##ajouter le tuple (cle, nombre valeur unique)
-        cle_val.append((cle, nombre_valeurs_unique))
+        #cle_val.append((cle, nombre_valeurs_unique))
 
     ## tier suivant le 2eme élément au tuple
-    cle_val.sort(key = lambda x : x[1])
+    #cle_val.sort(key = lambda x : x[1])
     ##Extraire la clé ayant le nombre maximal
-    cle_max_val = cle_val[-1][0]
-    return cle_max_val
+    #cle_max_val = cle_val[-1][0]
+    #return cle_max_val
 
-print(cleMaxValeurDict({"a":[9,10,9,7,3,1],"b":[5,3,2,2,2],"c":[1,1,1,1,1,1,8,2]}))
+#print(cleMaxValeurDict({"a":[9,10,9,7,3,1],"b":[5,3,2,2,2],"c":[1,1,1,1,1,1,8,2]}))
+
+# Exercice 68: Demander une liste à l'utilisateur
+
+liste_utilisateur = []
+
+## Demander le nombre d'éléments que la liste doit contenir
+nombre_element = int(input("Entrez le nombre d'élément de la liste :"))
+## Demander autant de nombre nécessaire pour remplir la liste
+for i in range (nombre_element):
+    element = int(input("Entrez un élément de la liste : "))
+    ## ajouter cet élément à la liste
+    liste_utilisateur.append(element)
+
+print (liste_utilisateur)
