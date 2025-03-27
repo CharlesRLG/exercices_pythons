@@ -784,14 +784,35 @@
 
 # Exercice 68: Demander une liste à l'utilisateur
 
-liste_utilisateur = []
+#liste_utilisateur = []
 
 ## Demander le nombre d'éléments que la liste doit contenir
-nombre_element = int(input("Entrez le nombre d'élément de la liste :"))
+#nombre_element = int(input("Entrez le nombre d'élément de la liste :"))
 ## Demander autant de nombre nécessaire pour remplir la liste
-for i in range (nombre_element):
-    element = int(input("Entrez un élément de la liste : "))
+#for i in range (nombre_element):
+    #element = int(input("Entrez un élément de la liste : "))
     ## ajouter cet élément à la liste
-    liste_utilisateur.append(element)
+    #liste_utilisateur.append(element)
 
-print (liste_utilisateur)
+#print (liste_utilisateur)
+
+# Exercice 69: Nombre de jour et heures
+
+from datetime import datetime
+
+def nbrJourHeure(dateDebut, dateFin):
+    ## le format de la date
+    format_date = "%Y/%m/%d"
+    ## convertir la date de début de string à un format date
+    date_debut_formate = datetime.strptime(dateDebut,format_date)
+    ## convertir la date de fin de string à un format date
+    date_fin_formate = datetime.strptime(dateFin,format_date)
+    ## Nombre de jour entre date début et date fin
+    nombreJour = (date_fin_formate - date_debut_formate).days
+    ## calcul du nombre d'heures
+    nombreHeure = nombreJour * 24
+
+    return nombreJour, nombreHeure
+
+print(nbrJourHeure("2022/05/15","2022/06/20"))
+print(nbrJourHeure("2022/04/1", "2022/04/27"))
