@@ -798,21 +798,49 @@
 
 # Exercice 69: Nombre de jour et heures
 
-from datetime import datetime
+#from datetime import datetime
 
-def nbrJourHeure(dateDebut, dateFin):
+#def nbrJourHeure(dateDebut, dateFin):
     ## le format de la date
-    format_date = "%Y/%m/%d"
+    #format_date = "%Y/%m/%d"
     ## convertir la date de début de string à un format date
-    date_debut_formate = datetime.strptime(dateDebut,format_date)
+    #date_debut_formate = datetime.strptime(dateDebut,format_date)
     ## convertir la date de fin de string à un format date
-    date_fin_formate = datetime.strptime(dateFin,format_date)
+    #date_fin_formate = datetime.strptime(dateFin,format_date)
     ## Nombre de jour entre date début et date fin
-    nombreJour = (date_fin_formate - date_debut_formate).days
+    #nombreJour = (date_fin_formate - date_debut_formate).days
     ## calcul du nombre d'heures
-    nombreHeure = nombreJour * 24
+    #nombreHeure = nombreJour * 24
 
-    return nombreJour, nombreHeure
+    #return nombreJour, nombreHeure
 
-print(nbrJourHeure("2022/05/15","2022/06/20"))
-print(nbrJourHeure("2022/04/1", "2022/04/27"))
+#print(nbrJourHeure("2022/05/15","2022/06/20"))
+#print(nbrJourHeure("2022/04/1", "2022/04/27"))
+
+# Exercice 70: Générer aléatoirement un mot de passe
+
+import string
+import random
+
+## création d'une liste de caractère à partir de laquelle nous allons générer notre mot de passe aléatoirement
+liste_caractere = list(string.ascii_letters + string.digits + "!@#$%^&*()")
+
+def genererMDP(caractere,tailleMDP):
+    ## mélanger aléatoirement les caractères
+    random.shuffle(caractere)
+    ## création de la liste qui va contenir notre mot de passe
+    mot_de_passe = []
+    ## choisir aléatoirement les caractère du mot de passe jusqu'à atteindre la taille passé en paramètres
+    for i in range(tailleMDP):
+        carac_alea = random.choice(caractere)
+        ## ajouter le caractère choisi aleatoirement dans la liste mot de passe
+        mot_de_passe.append(carac_alea)
+    
+    ## mélanger encore une fois ntre liste qui va contenir notre mot de passe
+    random.shuffle(mot_de_passe)
+    ## convertir la ligne en chaine de caractère sans espace entre les caractères
+    mot_de_passe = "".join(mot_de_passe)
+
+    return mot_de_passe
+
+print(genererMDP(liste_caractere,10))
