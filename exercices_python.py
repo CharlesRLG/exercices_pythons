@@ -819,28 +819,40 @@
 
 # Exercice 70: Générer aléatoirement un mot de passe
 
-import string
-import random
+#import string
+#import random
 
 ## création d'une liste de caractère à partir de laquelle nous allons générer notre mot de passe aléatoirement
-liste_caractere = list(string.ascii_letters + string.digits + "!@#$%^&*()")
+#liste_caractere = list(string.ascii_letters + string.digits + "!@#$%^&*()")
 
-def genererMDP(caractere,tailleMDP):
+#def genererMDP(caractere,tailleMDP):
     ## mélanger aléatoirement les caractères
-    random.shuffle(caractere)
+    #random.shuffle(caractere)
     ## création de la liste qui va contenir notre mot de passe
-    mot_de_passe = []
+    #mot_de_passe = []
     ## choisir aléatoirement les caractère du mot de passe jusqu'à atteindre la taille passé en paramètres
-    for i in range(tailleMDP):
-        carac_alea = random.choice(caractere)
+    #for i in range(tailleMDP):
+        #carac_alea = random.choice(caractere)
         ## ajouter le caractère choisi aleatoirement dans la liste mot de passe
-        mot_de_passe.append(carac_alea)
+        #mot_de_passe.append(carac_alea)
     
     ## mélanger encore une fois ntre liste qui va contenir notre mot de passe
-    random.shuffle(mot_de_passe)
+    #random.shuffle(mot_de_passe)
     ## convertir la ligne en chaine de caractère sans espace entre les caractères
-    mot_de_passe = "".join(mot_de_passe)
+    #mot_de_passe = "".join(mot_de_passe)
 
-    return mot_de_passe
+    #return mot_de_passe
 
-print(genererMDP(liste_caractere,10))
+#print(genererMDP(liste_caractere,10))
+
+# Exercice 71: Fonction Trigonométrique
+import math
+
+def foncTrigo(x):
+    ## définition de la fonction à calculer
+    f = math.cos(x)*math.sin(x) + math.sin(x) + 8
+    return f
+
+print(foncTrigo(math.pi/4))
+
+print(foncTrigo(math.pi))
