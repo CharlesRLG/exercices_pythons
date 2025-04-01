@@ -859,19 +859,32 @@
 
 # Exercice 72:
 
-liste_entiers = []
+#liste_entiers = []
 
 ## parcourir tous les nombres entre 100 et 999
-for nombre in range(100,1000):
+#for nombre in range(100,1000):
     ## convertir le nombre en chaine de caractère
-    str_nombre = str(nombre)
+    #str_nombre = str(nombre)
     ## sommer les chiffres du nombre
-    somme_chiffre = int(str_nombre[0]) + int(str_nombre[1]) + int(str_nombre[2])
+    #somme_chiffre = int(str_nombre[0]) + int(str_nombre[1]) + int(str_nombre[2])
     ## faire le produit des chiffre du nombre
-    produit_chiffre = int(str_nombre[0]) * int(str_nombre[1]) * int(str_nombre[2])
+    #produit_chiffre = int(str_nombre[0]) * int(str_nombre[1]) * int(str_nombre[2])
     ## si le reste de la division de produit_chiffre par somme_chiffre est égale à 0
-    if produit_chiffre % somme_chiffre == 0:
+    #if produit_chiffre % somme_chiffre == 0:
         ## alors ajouter le nombre dans la liste des entiers
-        liste_entiers.append(nombre)
+        #liste_entiers.append(nombre)
 
-print(liste_entiers)
+#print(liste_entiers)
+
+#Exercice 73: 
+
+def calculSomme(L):
+    ## si la fonction est vide
+    if len(L) == 0: ## ou if not L
+        ## retourner 0
+        return 0
+    ## sinon calculer la somme en utilisant la récursivité
+    return L[0] + calculSomme(L[1:])
+
+print(calculSomme([3,2,6,9,-1,5]))
+print(calculSomme([-3,-6,0,1,2,7]))
