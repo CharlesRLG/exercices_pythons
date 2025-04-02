@@ -878,13 +878,25 @@
 
 #Exercice 73: 
 
-def calculSomme(L):
+#def calculSomme(L):
     ## si la fonction est vide
-    if len(L) == 0: ## ou if not L
+    #if len(L) == 0: ## ou if not L
         ## retourner 0
-        return 0
+        #return 0
     ## sinon calculer la somme en utilisant la récursivité
-    return L[0] + calculSomme(L[1:])
+    #return L[0] + calculSomme(L[1:])
 
-print(calculSomme([3,2,6,9,-1,5]))
-print(calculSomme([-3,-6,0,1,2,7]))
+#print(calculSomme([3,2,6,9,-1,5]))
+#print(calculSomme([-3,-6,0,1,2,7]))
+
+#Exercice 74: 
+
+def suiteFibonacci(N):
+    ## si le nombre N passé en paramètre est inférieur ou égal à 2
+    if N<=2:
+        ## le résultat de la suite est égale à 1
+        return 1
+    ## sinon faire appel à la même fonction en faisant appel à la récursivité
+    return suiteFibonacci(N-1) + suiteFibonacci(N-2)
+
+print(suiteFibonacci(25))
