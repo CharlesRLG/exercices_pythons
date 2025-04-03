@@ -891,12 +891,33 @@
 
 #Exercice 74: 
 
-def suiteFibonacci(N):
+#def suiteFibonacci(N):
     ## si le nombre N passé en paramètre est inférieur ou égal à 2
-    if N<=2:
+    #if N<=2:
         ## le résultat de la suite est égale à 1
-        return 1
+        #return 1
     ## sinon faire appel à la même fonction en faisant appel à la récursivité
-    return suiteFibonacci(N-1) + suiteFibonacci(N-2)
+    #return suiteFibonacci(N-1) + suiteFibonacci(N-2)
 
-print(suiteFibonacci(25))
+#print(suiteFibonacci(25))
+
+# Exercice 75: Fonction récursive mutuelle
+
+def nombrePair(N):
+    ## si le nombre passé en paramètre est égal à 1
+    if N == 1:
+        ## alors il n'est pas pair
+        return False
+    ## sinon faire appel à la fonction impaire
+    return nombreImpair(N-1)
+
+def nombreImpair(N):
+    ## si le nombre passé est égal à 1
+    if N == 1:
+        ## alors N est impair
+        return True
+    ## sinon faire appel à la fonction nombrePair en N-1
+    return nombrePair(N-1)
+
+print(nombrePair(5))
+print(nombrePair(6))
