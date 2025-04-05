@@ -903,21 +903,34 @@
 
 # Exercice 75: Fonction récursive mutuelle
 
-def nombrePair(N):
+#def nombrePair(N):
     ## si le nombre passé en paramètre est égal à 1
-    if N == 1:
+    #if N == 1:
         ## alors il n'est pas pair
-        return False
+        #return False
     ## sinon faire appel à la fonction impaire
-    return nombreImpair(N-1)
+    #return nombreImpair(N-1)
 
-def nombreImpair(N):
+#def nombreImpair(N):
     ## si le nombre passé est égal à 1
-    if N == 1:
+    #if N == 1:
         ## alors N est impair
-        return True
+        #return True
     ## sinon faire appel à la fonction nombrePair en N-1
-    return nombrePair(N-1)
+    #return nombrePair(N-1)
 
-print(nombrePair(5))
-print(nombrePair(6))
+#print(nombrePair(5))
+#print(nombrePair(6))
+
+# Exercice 76: Recréation de la méthode join()
+
+def join(L,caractere):
+    chaine_carac =  ""
+    for i in range(len(L)):
+        chaine_carac += L[i]
+        if i != len(L)-1:
+            chaine_carac += caractere
+    return chaine_carac
+
+print(join(["bonjour","Aurélie"],"ici"))
+print(join(["2","3","4","1","33","44"],"9"))
