@@ -924,13 +924,27 @@
 
 # Exercice 76: Recréation de la méthode join()
 
-def join(L,caractere):
-    chaine_carac =  ""
-    for i in range(len(L)):
-        chaine_carac += L[i]
-        if i != len(L)-1:
-            chaine_carac += caractere
-    return chaine_carac
+#def join(L,caractere):
+    #chaine_carac =  ""
+    #for i in range(len(L)):
+        #chaine_carac += L[i]
+        #if i != len(L)-1:
+            #chaine_carac += caractere
+    #return chaine_carac
 
-print(join(["bonjour","Aurélie"],"ici"))
-print(join(["2","3","4","1","33","44"],"9"))
+#print(join(["bonjour","Aurélie"],"ici"))
+#print(join(["2","3","4","1","33","44"],"9"))
+
+# Exercice 77:recréation de la méthode replace()
+
+def remplacer(phrase,ancienMot,nouveauMot):
+    if ancienMot in phrase:
+        debut_ancienMot_index = phrase.index(ancienMot)
+        fin_ancienMot_index = debut_ancienMot_index + len(ancienMot)
+        phrase_list = list(phrase)
+        phrase_list[debut_ancienMot_index:fin_ancienMot_index] = nouveauMot
+        phrase = "".join(phrase_list)
+    return phrase
+
+print(remplacer("Bonjour Aurelie", "Aurelie","Justine"))
+print(remplacer("J'ai 50 ans","50","38"))
