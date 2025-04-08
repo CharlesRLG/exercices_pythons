@@ -937,14 +937,37 @@
 
 # Exercice 77:recréation de la méthode replace()
 
-def remplacer(phrase,ancienMot,nouveauMot):
-    if ancienMot in phrase:
-        debut_ancienMot_index = phrase.index(ancienMot)
-        fin_ancienMot_index = debut_ancienMot_index + len(ancienMot)
-        phrase_list = list(phrase)
-        phrase_list[debut_ancienMot_index:fin_ancienMot_index] = nouveauMot
-        phrase = "".join(phrase_list)
-    return phrase
+#def remplacer(phrase,ancienMot,nouveauMot):
+    #if ancienMot in phrase:
+        #debut_ancienMot_index = phrase.index(ancienMot)
+        #fin_ancienMot_index = debut_ancienMot_index + len(ancienMot)
+        #phrase_list = list(phrase)
+        #phrase_list[debut_ancienMot_index:fin_ancienMot_index] = nouveauMot
+        #phrase = "".join(phrase_list)
+    #return phrase
 
-print(remplacer("Bonjour Aurelie", "Aurelie","Justine"))
-print(remplacer("J'ai 50 ans","50","38"))
+#print(remplacer("Bonjour Aurelie", "Aurelie","Justine"))
+#print(remplacer("J'ai 50 ans","50","38"))
+
+# Exercice 78: re création de la méthode split()
+
+def split(phrase,caractere):
+    phrase_list=[]
+    ## initialisation d'une variable temporaire
+    mot_tmp = ""
+    ## si le caractère se trouve dans la phrase passé en paramètre 
+    if caractere in phrase:
+        ## parcourir tous les indices des éléments de la phrase
+        for i in range(len(phrase)):
+            if phrase[i] != caractere:
+                mot_tmp += phrase[i]
+                # si i est égale à l'index du dernier élément
+                if i == len(phrase)-1:
+                    phrase_list += [mot_tmp]
+                    return phrase_list
+            else:
+                phrase_list += [mot_tmp]
+                return phrase_list
+            
+print(split("Bonjour Aurélie", " "))
+print(split("Salut, ça va ?",","))
