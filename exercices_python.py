@@ -951,23 +951,36 @@
 
 # Exercice 78: re création de la méthode split()
 
-def split(phrase,caractere):
-    phrase_list=[]
+#def split(phrase,caractere):
+    #phrase_list=[]
     ## initialisation d'une variable temporaire
-    mot_tmp = ""
+    #mot_tmp = ""
     ## si le caractère se trouve dans la phrase passé en paramètre 
-    if caractere in phrase:
+    #if caractere in phrase:
         ## parcourir tous les indices des éléments de la phrase
-        for i in range(len(phrase)):
-            if phrase[i] != caractere:
-                mot_tmp += phrase[i]
+        #for i in range(len(phrase)):
+            #if phrase[i] != caractere:
+                #mot_tmp += phrase[i]
                 # si i est égale à l'index du dernier élément
-                if i == len(phrase)-1:
-                    phrase_list += [mot_tmp]
-                    return phrase_list
-            else:
-                phrase_list += [mot_tmp]
-                return phrase_list
+                #if i == len(phrase)-1:
+                    #phrase_list += [mot_tmp]
+                    #return phrase_list
+            #else:
+                #phrase_list += [mot_tmp]
+                #return phrase_list
             
-print(split("Bonjour Aurélie", " "))
-print(split("Salut, ça va ?",","))
+#print(split("Bonjour Aurélie", " "))
+#print(split("Salut, ça va ?",","))
+
+# Exercice 79: recréation de la méthode isdigit()
+
+def isdigit(chaine):
+    ## liste des chiffres
+    chiffres = ["0","1","2","3","4","5","6","7","8","9"]
+    for c in chaine:
+        if c not in chiffres:
+            return False
+    return True
+
+print(isdigit("123948493"))
+print(isdigit("edgte9be"))
