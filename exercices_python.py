@@ -974,13 +974,28 @@
 
 # Exercice 79: recréation de la méthode isdigit()
 
-def isdigit(chaine):
+#def isdigit(chaine):
     ## liste des chiffres
-    chiffres = ["0","1","2","3","4","5","6","7","8","9"]
-    for c in chaine:
-        if c not in chiffres:
-            return False
-    return True
+    #chiffres = ["0","1","2","3","4","5","6","7","8","9"]
+    #for c in chaine:
+        #if c not in chiffres:
+            #return False
+    #return True
 
-print(isdigit("123948493"))
-print(isdigit("edgte9be"))
+#print(isdigit("123948493"))
+#print(isdigit("edgte9be"))
+
+# Exercice 80: les nombres palindromes
+
+def estUnPalindrome(nombre):
+    if nombre <= 10:
+        return False
+    else:
+        # convertir en chaine de caractère
+        nombre_str = str(nombre)
+        nombre_str_inverse = nombre_str[::-1]
+        if nombre_str == nombre_str_inverse:
+            return True
+        
+print(estUnPalindrome(10))
+print(estUnPalindrome(12521))
