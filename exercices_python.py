@@ -991,11 +991,23 @@ def estUnPalindrome(nombre):
     if nombre <= 10:
         return False
     else:
-        # convertir en chaine de caractère
+         #convertir en chaine de caractère
         nombre_str = str(nombre)
         nombre_str_inverse = nombre_str[::-1]
         if nombre_str == nombre_str_inverse:
             return True
         
-print(estUnPalindrome(10))
-print(estUnPalindrome(12521))
+#print(estUnPalindrome(10))
+#print(estUnPalindrome(12521))
+
+# Exercice 81: les nombres palindromes lié à l' exe 80
+
+nombre_palindrome = []
+for i in range(100,1000):
+    for j in range(100,1000):
+        nombre = i*j
+        if estUnPalindrome(nombre):
+            nombre_palindrome.append(nombre)
+
+plusGrand_palindrome = max(nombre_palindrome)
+print(plusGrand_palindrome)
