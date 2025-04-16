@@ -1013,39 +1013,51 @@
 #print(plusGrand_palindrome)
 
 # Exercice 82: Les nombre circulaires premiers
-import math
+#import math
 
-def estPremier (nombre):
+#def estPremier (nombre):
     # diviseur doit être supérieur ou égale à 2
-    diviseur = 2
+    #diviseur = 2
     # tant que diviseur ne dépasse pas la racine carré de nombre
-    while diviseur <= math.sqrt(nombre):
+    #while diviseur <= math.sqrt(nombre):
         # si nombre est divisible par d alors
-        if nombre%diviseur == 0:
+        #if nombre%diviseur == 0:
             ## si un diviseur est trouver alors nombre n'est pas premier
-            return False
-        diviseur += 1
+            #return False
+        #diviseur += 1
     ## si on trouve aucun diviseur alors nombre est premier
+    #return True
+
+#def testCirculairePremier(nombre):
+    # si le paramètre d'entré est nombre = 197 alors cette liste va contenir 197, 971 et 719
+    #nombre_circulaire = []
+    # convertir nombre en string
+    #nombre = str(nombre)
+    # trouver tous les nombre circulaire du paramètre d'entré nombre
+    #for i in range (len(nombre)):
+        #nombre_circulaire.append(nombre[i:] + nombre[i:])
+        # tester si tous les nombres de la liste nombre_circulaire sont circulaire
+        #premier_circulaire = True
+        #for nombre in nombre_circulaire:
+            # convertir nombre de string à entier
+            #nombre = int(nombre)
+            #utilisation de la fonction est premier
+            #if not estPremier(nombre):
+                # si un seul nombre n'est pas premier alors le nombre donné en parametre n'est pas circulaire premier
+                #premier_circulaire = False
+        #return premier_circulaire
+
+#print(testCirculairePremier(9377))
+#print(testCirculairePremier(36))
+
+# Exercice 83: Nombre avec chiffre distincts
+
+def estDistinct(nombre):
+    nombre_str = str(nombre)
+    for chiffre in nombre_str:
+        if nombre_str.count(chiffre) >= 2:
+            return False
     return True
 
-def testCirculairePremier(nombre):
-    # si le paramètre d'entré est nombre = 197 alors cette liste va contenir 197, 971 et 719
-    nombre_circulaire = []
-    # convertir nombre en string
-    nombre = str(nombre)
-    # trouver tous les nombre circulaire du paramètre d'entré nombre
-    for i in range (len(nombre)):
-        nombre_circulaire.append(nombre[i:] + nombre[i:])
-        # tester si tous les nombres de la liste nombre_circulaire sont circulaire
-        premier_circulaire = True
-        for nombre in nombre_circulaire:
-            # convertir nombre de string à entier
-            nombre = int(nombre)
-            #utilisation de la fonction est premier
-            if not estPremier(nombre):
-                # si un seul nombre n'est pas premier alors le nombre donné en parametre n'est pas circulaire premier
-                premier_circulaire = False
-        return premier_circulaire
-
-print(testCirculairePremier(9377))
-print(testCirculairePremier(36))
+print(estDistinct(9647))
+print(estDistinct(1343))
