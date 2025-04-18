@@ -1052,12 +1052,27 @@
 
 # Exercice 83: Nombre avec chiffre distincts
 
-def estDistinct(nombre):
-    nombre_str = str(nombre)
-    for chiffre in nombre_str:
-        if nombre_str.count(chiffre) >= 2:
-            return False
-    return True
+#def estDistinct(nombre):
+    #nombre_str = str(nombre)
+    #for chiffre in nombre_str:
+        #if nombre_str.count(chiffre) >= 2:
+            #return False
+    #return True
 
-print(estDistinct(9647))
-print(estDistinct(1343))
+#print(estDistinct(9647))
+#print(estDistinct(1343))
+
+# Exercice 84: 
+
+def codeSomme(nombre):
+    if nombre >= 100:
+        s = nombre
+        while s < 1 or s > 9:
+            nb = str(s)
+            s = 0
+            for lettre in nb:
+                s += int(lettre)
+    return str(s) + str(nombre)
+
+print(codeSomme(699810))
+print(codeSomme(3201))
