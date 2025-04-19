@@ -1064,15 +1064,39 @@
 
 # Exercice 84: 
 
-def codeSomme(nombre):
-    if nombre >= 100:
-        s = nombre
-        while s < 1 or s > 9:
-            nb = str(s)
-            s = 0
-            for lettre in nb:
-                s += int(lettre)
-    return str(s) + str(nombre)
+#def codeSomme(nombre):
+    #if nombre >= 100:
+        #s = nombre
+        #while s < 1 or s > 9:
+            #nb = str(s)
+            #s = 0
+            #for lettre in nb:
+                #s += int(lettre)
+    #return str(s) + str(nombre)
 
-print(codeSomme(699810))
-print(codeSomme(3201))
+#print(codeSomme(699810))
+#print(codeSomme(3201))
+
+# Exercice 85: recherche dichotomique
+
+def rechercheDicotomique(L,elt):
+    # Trier la liste par ordre croissant
+    L.sort()
+    while L:
+        ## index du milieu
+        index_milieu = len(L) // 2
+        # si l'élément de l'index est égal à l'élément recherché
+        if elt == L[index_milieu]:
+            return True
+        # si l'élément de l'index est plus petit que l'élément recherché
+        elif elt < L[index_milieu]:
+            # garder que les éléments dont l'index est plus petit que l'index du milieu
+            L = L[:index_milieu]
+        # Si l'élément recherché est plus grand que l'index_milieu
+        else: 
+            # garder que les éléments dont l'index est plus grand que l'index milieu
+            L = L[index_milieu+1:]
+    return False
+
+print(rechercheDicotomique([6,9,15,36,41,43,47],41))
+print(rechercheDicotomique([-9,-1,3,4,7,11],0))
