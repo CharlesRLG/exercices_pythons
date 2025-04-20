@@ -1079,24 +1079,41 @@
 
 # Exercice 85: recherche dichotomique
 
-def rechercheDicotomique(L,elt):
+#def rechercheDicotomique(L,elt):
     # Trier la liste par ordre croissant
-    L.sort()
-    while L:
+    #L.sort()
+    #while L:
         ## index du milieu
-        index_milieu = len(L) // 2
+        #index_milieu = len(L) // 2
         # si l'élément de l'index est égal à l'élément recherché
-        if elt == L[index_milieu]:
-            return True
+        #if elt == L[index_milieu]:
+            #return True
         # si l'élément de l'index est plus petit que l'élément recherché
-        elif elt < L[index_milieu]:
+        #elif elt < L[index_milieu]:
             # garder que les éléments dont l'index est plus petit que l'index du milieu
-            L = L[:index_milieu]
+            #L = L[:index_milieu]
         # Si l'élément recherché est plus grand que l'index_milieu
-        else: 
+        #else: 
             # garder que les éléments dont l'index est plus grand que l'index milieu
-            L = L[index_milieu+1:]
-    return False
+            #L = L[index_milieu+1:]
+    #return False
 
-print(rechercheDicotomique([6,9,15,36,41,43,47],41))
-print(rechercheDicotomique([-9,-1,3,4,7,11],0))
+#print(rechercheDicotomique([6,9,15,36,41,43,47],41))
+#print(rechercheDicotomique([-9,-1,3,4,7,11],0))
+
+# Exercice 86: Triplet pythagoricien x,y,z
+
+# 3 boucle for pour couvrir tousl les cas possibles de x,y,z
+
+for x in range(1,1000):
+    for y in range(x + 1,1000):
+        for z in range(y + 1,1000):
+            # si les équations sont vérifiées
+            if x**2 + y**2 == z**2: 
+                if x+y+z == 1000:
+                    # afficher les nombres x,y,z et le produit de ces nombres
+
+                    print("x = ", x)
+                    print("y = ", y)
+                    print("z = ", z)
+                    print("x*y*z = ", x*y*z)
