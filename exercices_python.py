@@ -1105,15 +1105,28 @@
 
 # 3 boucle for pour couvrir tousl les cas possibles de x,y,z
 
-for x in range(1,1000):
-    for y in range(x + 1,1000):
-        for z in range(y + 1,1000):
+#for x in range(1,1000):
+    #for y in range(x + 1,1000):
+        #for z in range(y + 1,1000):
             # si les équations sont vérifiées
-            if x**2 + y**2 == z**2: 
-                if x+y+z == 1000:
+            #if x**2 + y**2 == z**2: 
+                #if x+y+z == 1000:
                     # afficher les nombres x,y,z et le produit de ces nombres
+                    #print("x = ", x)
+                    #print("y = ", y)
+                    #print("z = ", z)
+                    #print("x*y*z = ", x*y*z)
 
-                    print("x = ", x)
-                    print("y = ", y)
-                    print("z = ", z)
-                    print("x*y*z = ", x*y*z)
+# Exercice 87: traitement d'un fichier
+
+def traitementFichier(cheminFichier):
+    ## ouverture en lecture du premier fichier
+    with open(cheminFichier, "r") as fichier1:
+        # ouverture en écriture du 2 ème fichier
+        with open("test2.txt", "w") as fichier2:
+            ## pour chaque ligne du fichier 1
+            for ligne in fichier1:
+                ## supprimer les retours à la ligne pendant l'écriture dans le nouveau fichier
+                fichier2.write(ligne.rstrip("\n"))
+
+traitementFichier(r"C:\Users\Charles\Documents\exercices_python\test.txt")
