@@ -1119,14 +1119,29 @@
 
 # Exercice 87: traitement d'un fichier
 
-def traitementFichier(cheminFichier):
+#def traitementFichier(cheminFichier):
     ## ouverture en lecture du premier fichier
-    with open(cheminFichier, "r") as fichier1:
+    #with open(cheminFichier, "r") as fichier1:
         # ouverture en écriture du 2 ème fichier
-        with open("test2.txt", "w") as fichier2:
+        #with open("test2.txt", "w") as fichier2:
             ## pour chaque ligne du fichier 1
-            for ligne in fichier1:
+            #for ligne in fichier1:
                 ## supprimer les retours à la ligne pendant l'écriture dans le nouveau fichier
-                fichier2.write(ligne.rstrip("\n"))
+                #fichier2.write(ligne.rstrip("\n"))
 
-traitementFichier(r"C:\Users\Charles\Documents\exercices_python\test.txt")
+#traitementFichier(r"C:\Users\Charles\Documents\exercices_python\test.txt")
+
+# Exercice 88: Trie à bulle
+
+def triCroissant(L):
+    # Parcourir tous les index de L
+    for i in range(len(L)):
+        #pour les index de i
+        for j in range(i+1, len(L)):
+            # si l'élément à l'index i est supérieur à l'élément se trouvant à j
+            if L[i] > L[j]:
+                # échangé l'emplacement des 2 nombres
+                L[i], L[j] = L[j], L[i]
+    return L
+
+print(triCroissant([-3,5.3,2,7,1,2.3,9.5]))
