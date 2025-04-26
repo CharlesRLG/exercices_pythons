@@ -1133,15 +1133,45 @@
 
 # Exercice 88: Trie à bulle
 
-def triCroissant(L):
+#def triCroissant(L):
     # Parcourir tous les index de L
-    for i in range(len(L)):
+    #for i in range(len(L)):
         #pour les index de i
-        for j in range(i+1, len(L)):
+        #for j in range(i+1, len(L)):
             # si l'élément à l'index i est supérieur à l'élément se trouvant à j
-            if L[i] > L[j]:
+            #if L[i] > L[j]:
                 # échangé l'emplacement des 2 nombres
-                L[i], L[j] = L[j], L[i]
-    return L
+                #L[i], L[j] = L[j], L[i]
+    #return L
 
-print(triCroissant([-3,5.3,2,7,1,2.3,9.5]))
+#print(triCroissant([-3,5.3,2,7,1,2.3,9.5]))
+
+# Exercice 89: Création d'une classe
+
+## Définition d'une classe Personne
+
+class Personne : 
+    ## constructeur init
+    def __init__ (self,taille,poids,age):
+        ## attribut de la classe
+        self.taille = taille
+        self.poids = poids
+        self.age = age
+
+    ## 1ère méthode de la classe
+    def calculIMC(self):
+        ## formule de calcul IMC
+        return self.poids/(self.taille**2)
+    ## 2ème méthode de la classe
+    def interpretationIMC(self):
+        #Permet de faire un affichage selon le calcul IMC
+        if self.calculIMC() <= 18.5:
+            return "Insufisance pondérale"
+        elif self.calculIMC() >= 30:
+            return "Obèse"
+        return "surpoid ou normale"
+    
+julien = Personne(1.80,114,34)
+
+print(julien.calculIMC())
+print(julien.interpretationIMC())
