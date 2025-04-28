@@ -1150,28 +1150,56 @@
 
 ## Définition d'une classe Personne
 
-class Personne : 
+#class Personne : 
     ## constructeur init
-    def __init__ (self,taille,poids,age):
+    #def __init__ (self,taille,poids,age):
         ## attribut de la classe
-        self.taille = taille
-        self.poids = poids
-        self.age = age
+        #self.taille = taille
+        #self.poids = poids
+        #self.age = age
 
     ## 1ère méthode de la classe
-    def calculIMC(self):
+    #def calculIMC(self):
         ## formule de calcul IMC
-        return self.poids/(self.taille**2)
+        #return self.poids/(self.taille**2)
     ## 2ème méthode de la classe
-    def interpretationIMC(self):
+    #def interpretationIMC(self):
         #Permet de faire un affichage selon le calcul IMC
-        if self.calculIMC() <= 18.5:
-            return "Insufisance pondérale"
-        elif self.calculIMC() >= 30:
-            return "Obèse"
-        return "surpoid ou normale"
+        #if self.calculIMC() <= 18.5:
+            #return "Insufisance pondérale"
+        #elif self.calculIMC() >= 30:
+            #return "Obèse"
+        #return "surpoid ou normale"
     
-julien = Personne(1.80,114,34)
+#julien = Personne(1.80,114,34)
 
-print(julien.calculIMC())
-print(julien.interpretationIMC())
+#print(julien.calculIMC())
+#print(julien.interpretationIMC())
+
+# Exercice 90: Classe rectangle
+
+class Rectangle:
+    ## constructeur pour initialiser automatiquement l'instance qu'on va créer
+    def __init__(self,largeur,longueur):
+        self.longueur = longueur
+        self.largeur = largeur
+
+    ## méthode qui permet de calculer le périmètre d'un rectangle
+    def Perimetre(self):
+        return 2*(self.largeur + self.longueur)
+    
+    ## méthode qui permet de calculer la surface d'un rectangle
+    def Surface(self):
+        return self.largeur * self.longueur
+    
+## ---- Création d'une instance + utilisation de méthodes ---  ##
+## Création d'une instance de la classe rectangle
+a = int(input("Saisissez la largeur du rectangle : \n" ))
+b = int(input("Saisissez la longueur du rectangle : \n"))
+
+rectangle1 = Rectangle(a,b)
+
+print ("\n La largeur du rectangle1 est ", rectangle1.largeur)
+print (" La longueur du rectangle1 est ", rectangle1.longueur)
+print (" Le périmètre du rectangle1 est de ", rectangle1.Perimetre())
+print (" La surface du rectangle1 est de ", rectangle1.Surface())
