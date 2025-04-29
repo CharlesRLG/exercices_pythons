@@ -1196,10 +1196,30 @@ class Rectangle:
 ## Création d'une instance de la classe rectangle
 a = int(input("Saisissez la largeur du rectangle : \n" ))
 b = int(input("Saisissez la longueur du rectangle : \n"))
+c = int(input("La hauteur du parallelepipede est de : \n"))
 
 rectangle1 = Rectangle(a,b)
 
 print ("\n La largeur du rectangle1 est ", rectangle1.largeur)
 print (" La longueur du rectangle1 est ", rectangle1.longueur)
-print (" Le périmètre du rectangle1 est de ", rectangle1.Perimetre())
-print (" La surface du rectangle1 est de ", rectangle1.Surface())
+print (" La longueur du rectangle1 est ", c)
+#print (" Le périmètre du rectangle1 est de ", rectangle1.Perimetre())
+#print (" La surface du rectangle1 est de ", rectangle1.Surface())
+
+# Exercice 91: Héritage d'une classe
+
+class Parallelepipede(Rectangle):
+    ## constructeur
+    def __init__(self,largeur,longueur,hauteur):
+        ## initialisation des attribut de la class parent
+        Rectangle.__init__(self,largeur,longueur)
+        ## nouvel attribut de la class Parallelepipede
+        self.hauteur = hauteur
+    ## métode qui calcule le volume
+    def Volume(self):
+        return self.longueur*self.largeur*self.hauteur
+    
+Parallelepipede1 = Parallelepipede(a,b,c)
+
+print("Périmètre du parallelepipede : ", Parallelepipede1.Perimetre())
+print("Volume du parallelepipede : ", Parallelepipede1.Volume())
