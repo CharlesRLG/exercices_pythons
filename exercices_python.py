@@ -1178,48 +1178,67 @@
 
 # Exercice 90: Classe rectangle
 
-class Rectangle:
+#class Rectangle:
     ## constructeur pour initialiser automatiquement l'instance qu'on va créer
-    def __init__(self,largeur,longueur):
-        self.longueur = longueur
-        self.largeur = largeur
+    #def __init__(self,largeur,longueur):
+        #self.longueur = longueur
+        #self.largeur = largeur
 
     ## méthode qui permet de calculer le périmètre d'un rectangle
-    def Perimetre(self):
-        return 2*(self.largeur + self.longueur)
+    #def Perimetre(self):
+        #return 2*(self.largeur + self.longueur)
     
     ## méthode qui permet de calculer la surface d'un rectangle
-    def Surface(self):
-        return self.largeur * self.longueur
+    #def Surface(self):
+        #return self.largeur * self.longueur
     
 ## ---- Création d'une instance + utilisation de méthodes ---  ##
 ## Création d'une instance de la classe rectangle
-a = int(input("Saisissez la largeur du rectangle : \n" ))
-b = int(input("Saisissez la longueur du rectangle : \n"))
-c = int(input("La hauteur du parallelepipede est de : \n"))
+#a = int(input("Saisissez la largeur du rectangle : \n" ))
+#b = int(input("Saisissez la longueur du rectangle : \n"))
+#c = int(input("La hauteur du parallelepipede est de : \n"))
 
-rectangle1 = Rectangle(a,b)
+#rectangle1 = Rectangle(a,b)
 
-print ("\n La largeur du rectangle1 est ", rectangle1.largeur)
-print (" La longueur du rectangle1 est ", rectangle1.longueur)
-print (" La longueur du rectangle1 est ", c)
+#print ("\n La largeur du rectangle1 est ", rectangle1.largeur)
+#print (" La longueur du rectangle1 est ", rectangle1.longueur)
+#print (" La longueur du rectangle1 est ", c)
 #print (" Le périmètre du rectangle1 est de ", rectangle1.Perimetre())
 #print (" La surface du rectangle1 est de ", rectangle1.Surface())
 
 # Exercice 91: Héritage d'une classe
 
-class Parallelepipede(Rectangle):
+#class Parallelepipede(Rectangle):
     ## constructeur
-    def __init__(self,largeur,longueur,hauteur):
+    #def __init__(self,largeur,longueur,hauteur):
         ## initialisation des attribut de la class parent
-        Rectangle.__init__(self,largeur,longueur)
+        #Rectangle.__init__(self,largeur,longueur)
         ## nouvel attribut de la class Parallelepipede
-        self.hauteur = hauteur
+        #self.hauteur = hauteur
     ## métode qui calcule le volume
-    def Volume(self):
-        return self.longueur*self.largeur*self.hauteur
+    #def Volume(self):
+        #return self.longueur*self.largeur*self.hauteur
     
-Parallelepipede1 = Parallelepipede(a,b,c)
+#Parallelepipede1 = Parallelepipede(a,b,c)
 
-print("Périmètre du parallelepipede : ", Parallelepipede1.Perimetre())
-print("Volume du parallelepipede : ", Parallelepipede1.Volume())
+#print("Périmètre du parallelepipede : ", Parallelepipede1.Perimetre())
+#print("Volume du parallelepipede : ", Parallelepipede1.Volume())
+
+# Exercice 92: Classe compte banquaire
+
+class CompteBanquaire:
+    ## constructeur d'initialisation des attributs
+    def __init__(self,nom = "maxime", solde = 600):
+        self.nom = nom
+        self.solde = solde
+    
+    ## méthode dépot
+    def depot(self,somme):
+        self.solde += somme
+    ## méthode retrait
+    def retrait(self,somme):
+        self.solde -= somme
+    ## méthode spéciale à revoir
+    def __repr__(self):
+        return "Le solde du compte banquaire de " + self.nom + " est de " + str(self.solde) + " euros"
+    
