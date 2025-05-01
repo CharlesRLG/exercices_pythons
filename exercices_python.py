@@ -1226,19 +1226,49 @@
 
 # Exercice 92: Classe compte banquaire
 
-class CompteBanquaire:
+#class CompteBanquaire:
     ## constructeur d'initialisation des attributs
-    def __init__(self,nom = "maxime", solde = 600):
-        self.nom = nom
-        self.solde = solde
+    #def __init__(self,nom = "maxime", solde = 600):
+        #self.nom = nom
+        #self.solde = solde
     
     ## méthode dépot
-    def depot(self,somme):
-        self.solde += somme
+    #def depot(self,somme):
+        #self.solde += somme
     ## méthode retrait
-    def retrait(self,somme):
-        self.solde -= somme
+    #def retrait(self,somme):
+        #self.solde -= somme
     ## méthode spéciale à revoir
-    def __repr__(self):
-        return "Le solde du compte banquaire de " + self.nom + " est de " + str(self.solde) + " euros"
+    #def __repr__(self):
+        #return "Le solde du compte banquaire de " + self.nom + " est de " + str(self.solde) + " euros"
+
+# Exercice 93: Classe Voiture
+
+class Voiture:
+    ## Construction d'initialisation des attributs ayant des attributs par défault
+    def __init__(self,marque="peugeot",couleur="noir",nomConducteur="aucun",kmDebut=16900):
+        self.marque = marque
+        self.couleur = couleur
+        self.nomConducteur = nomConducteur
+        self.kmDebut = kmDebut
+
+    ## Méthode de changement de constructeur
+    def choixConducteur(self,nomConducteur):
+        self.nomConducteur = nomConducteur
+        return self.nomConducteur
+    
+    ## Méthode de calcule de la distance de circulation
+    def distanceCirculation(self,kmFin):
+        distance_parcourue = kmFin - self.kmDebut
+        return distance_parcourue
+    
+    def afficherInfo(self):
+        kmActuel = self.distanceCirculation(20000) + self.kmDebut
+        return "La voiture " + self.marque + " de couleur " + self.couleur + " dont le conducteur est \n" + self.nomConducteur + " possède un kilométrage actuel de " + str(kmActuel) + " km."
+    
+voiture1 = Voiture()
+
+print("Changement de conducteur : ",voiture1.choixConducteur("Patrick"))
+print("Distance de circulation : ", voiture1.distanceCirculation(39000))
+voiture1.afficherInfo()
     
