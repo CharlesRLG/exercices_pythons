@@ -1301,19 +1301,52 @@
 
 ## Exercice 95: Surcharge d'opérateur
 
-class NombreComplexe:
+#class NombreComplexe:
 
     ## constructeur d'initialisation des attributs
-    def __init__(self,reel,img):
-        self.reel = reel
-        self.img = img
+    #def __init__(self,reel,img):
+        #self.reel = reel
+        #self.img = img
 
     ## surcharge de la représentation
-    def __str__(self):
-        return str(self.reel) + " + " + str(self.img) + "i"
+    #def __str__(self):
+        #return str(self.reel) + " + " + str(self.img) + "i"
     ## surcharge de la represantation
-    def __repr__(self):
-        return repr(self.reel) + " + " + repr(self.img) + "i"
+    #def __repr__(self):
+        #return repr(self.reel) + " + " + repr(self.img) + "i"
     
-nbr1 = NombreComplexe(2,7)
-print(nbr1)
+#nbr1 = NombreComplexe(2,7)
+#print(nbr1)
+
+## Exercice 96: Classe liste personnalisé
+
+class ListePerso:
+    def __init__(self,*nombres):
+        self.nombres = []
+        for nombre in nombres:
+            if type(nombre) == int or type(nombre) == float:
+                self.nombres.append(nombre)
+            else:
+                print(f"Opération interdite : il n'est pas possible d'initialiser la liste avec {nombre}")
+    ## méthode append
+    def append(self,nombre):
+        ## si le nombre est un entier ou un décimal
+        if type(nombre) == int or type(nombre) == float:
+            ## alors rajouter ce nombre à la liste
+            if nombre not in self.nombres:
+                self.nombres.append(nombre)
+            else:
+                return f"le nombre {nombre} existe déjà dans la liste {self}"
+        else: 
+            return f"Opération interdite : il n'est pas possible de rajouter le type {type(nombre)} dans la liste"
+        
+    
+    def __repr__(self):
+        return f"ListePerso({self.nombres})"
+
+L1 = ListePerso(5,2,3,7,9)
+print(L1)
+L1.append(2)
+L1.append("ABC")
+L1.append(10)
+print(L1)
