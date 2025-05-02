@@ -1244,31 +1244,57 @@
 
 # Exercice 93: Classe Voiture
 
-class Voiture:
+#class Voiture:
     ## Construction d'initialisation des attributs ayant des attributs par défault
-    def __init__(self,marque="peugeot",couleur="noir",nomConducteur="aucun",kmDebut=16900):
-        self.marque = marque
-        self.couleur = couleur
-        self.nomConducteur = nomConducteur
-        self.kmDebut = kmDebut
+    #def __init__(self,marque="peugeot",couleur="noir",nomConducteur="aucun",kmDebut=16900):
+        #self.marque = marque
+        #self.couleur = couleur
+        #self.nomConducteur = nomConducteur
+        #self.kmDebut = kmDebut
 
     ## Méthode de changement de constructeur
-    def choixConducteur(self,nomConducteur):
-        self.nomConducteur = nomConducteur
-        return self.nomConducteur
+    #def choixConducteur(self,nomConducteur):
+        #self.nomConducteur = nomConducteur
+        #return self.nomConducteur
     
     ## Méthode de calcule de la distance de circulation
-    def distanceCirculation(self,kmFin):
-        distance_parcourue = kmFin - self.kmDebut
-        return distance_parcourue
+    #def distanceCirculation(self,kmFin):
+        #distance_parcourue = kmFin - self.kmDebut
+        #return distance_parcourue
     
-    def afficherInfo(self):
-        kmActuel = self.distanceCirculation(20000) + self.kmDebut
-        return "La voiture " + self.marque + " de couleur " + self.couleur + " dont le conducteur est \n" + self.nomConducteur + " possède un kilométrage actuel de " + str(kmActuel) + " km."
+    #def afficherInfo(self):
+        #kmActuel = self.distanceCirculation(20000) + self.kmDebut
+        #return "La voiture " + self.marque + " de couleur " + self.couleur + " dont le conducteur est \n" + self.nomConducteur + " possède un kilométrage actuel de " + str(kmActuel) + " km."
     
-voiture1 = Voiture()
+#voiture1 = Voiture()
 
-print("Changement de conducteur : ",voiture1.choixConducteur("Patrick"))
-print("Distance de circulation : ", voiture1.distanceCirculation(39000))
-voiture1.afficherInfo()
+#print("Changement de conducteur : ",voiture1.choixConducteur("Patrick"))
+#print("Distance de circulation : ", voiture1.distanceCirculation(39000))
+#voiture1.afficherInfo()
     
+# Exercice 94: Surcharge Opérateur
+
+class Point2D:
+    ## constructeur d'initialisation des attributs
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    ## surcharge de l'opérateur +
+    def __add__(self,p):
+        return self.x + p.x, self.y+p.y
+    ## surcharge de l'opérateur -
+    def __sub__(self,p):
+        return self.x-p.x, self.y-p.y
+    ## surcharge de l'opérateur *
+    def __mul__(self,p):
+        return self.x*p.x, self.y*p.y
+    ## surcharge de l'opérateur /
+    def __truediv__(self,p):
+        return self.x/p.x, self.y/p.y
+    
+p1 = Point2D(3,2)
+p2 = Point2D(1,4)
+print("p1-p2 = ", p1-p2)
+print("p1+p2 = ", p1+p2)
+print("p1*p2 = ", p1*p2)
+print("p1/p2 = ", p1/p2)
