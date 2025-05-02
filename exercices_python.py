@@ -1274,27 +1274,46 @@
     
 # Exercice 94: Surcharge Opérateur
 
-class Point2D:
+#class Point2D:
     ## constructeur d'initialisation des attributs
-    def __init__(self,x,y):
-        self.x=x
-        self.y=y
+    #def __init__(self,x,y):
+        #self.x=x
+        #self.y=y
     ## surcharge de l'opérateur +
-    def __add__(self,p):
-        return self.x + p.x, self.y+p.y
+    #def __add__(self,p):
+        #return self.x + p.x, self.y+p.y
     ## surcharge de l'opérateur -
-    def __sub__(self,p):
-        return self.x-p.x, self.y-p.y
+    #def __sub__(self,p):
+        #return self.x-p.x, self.y-p.y
     ## surcharge de l'opérateur *
-    def __mul__(self,p):
-        return self.x*p.x, self.y*p.y
+    #def __mul__(self,p):
+        #return self.x*p.x, self.y*p.y
     ## surcharge de l'opérateur /
-    def __truediv__(self,p):
-        return self.x/p.x, self.y/p.y
+    #def __truediv__(self,p):
+        #return self.x/p.x, self.y/p.y
     
-p1 = Point2D(3,2)
-p2 = Point2D(1,4)
-print("p1-p2 = ", p1-p2)
-print("p1+p2 = ", p1+p2)
-print("p1*p2 = ", p1*p2)
-print("p1/p2 = ", p1/p2)
+#p1 = Point2D(3,2)
+#p2 = Point2D(1,4)
+#print("p1-p2 = ", p1-p2)
+#print("p1+p2 = ", p1+p2)
+#print("p1*p2 = ", p1*p2)
+#print("p1/p2 = ", p1/p2)
+
+## Exercice 95: Surcharge d'opérateur
+
+class NombreComplexe:
+
+    ## constructeur d'initialisation des attributs
+    def __init__(self,reel,img):
+        self.reel = reel
+        self.img = img
+
+    ## surcharge de la représentation
+    def __str__(self):
+        return str(self.reel) + " + " + str(self.img) + "i"
+    ## surcharge de la represantation
+    def __repr__(self):
+        return repr(self.reel) + " + " + repr(self.img) + "i"
+    
+nbr1 = NombreComplexe(2,7)
+print(nbr1)
