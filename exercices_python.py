@@ -1320,33 +1320,65 @@
 
 ## Exercice 96: Classe liste personnalisé
 
-class ListePerso:
-    def __init__(self,*nombres):
-        self.nombres = []
-        for nombre in nombres:
-            if type(nombre) == int or type(nombre) == float:
-                self.nombres.append(nombre)
-            else:
-                print(f"Opération interdite : il n'est pas possible d'initialiser la liste avec {nombre}")
+#class ListePerso:
+    #def __init__(self,*nombres):
+        #self.nombres = []
+        #for nombre in nombres:
+            #if type(nombre) == int or type(nombre) == float:
+                #self.nombres.append(nombre)
+            #else:
+                #print(f"Opération interdite : il n'est pas possible d'initialiser la liste avec {nombre}")
     ## méthode append
-    def append(self,nombre):
+    #def append(self,nombre):
         ## si le nombre est un entier ou un décimal
-        if type(nombre) == int or type(nombre) == float:
+        #if type(nombre) == int or type(nombre) == float:
             ## alors rajouter ce nombre à la liste
-            if nombre not in self.nombres:
-                self.nombres.append(nombre)
-            else:
-                return f"le nombre {nombre} existe déjà dans la liste {self}"
-        else: 
-            return f"Opération interdite : il n'est pas possible de rajouter le type {type(nombre)} dans la liste"
+            #if nombre not in self.nombres:
+                #self.nombres.append(nombre)
+            #else:
+                #return f"le nombre {nombre} existe déjà dans la liste {self}"
+        #else: 
+            #return f"Opération interdite : il n'est pas possible de rajouter le type {type(nombre)} dans la liste"
         
     
-    def __repr__(self):
-        return f"ListePerso({self.nombres})"
+    #def __repr__(self):
+        #return f"ListePerso({self.nombres})"
 
-L1 = ListePerso(5,2,3,7,9)
-print(L1)
-L1.append(2)
-L1.append("ABC")
-L1.append(10)
-print(L1)
+#L1 = ListePerso(5,2,3,7,9)
+#print(L1)
+#L1.append(2)
+#L1.append("ABC")
+#L1.append(10)
+#print(L1)
+
+# Exercice 97: Classe string personnalisé
+
+import string
+## Listing de tous les chiffres de 0 à 9 + ajout des caractères "virgule" et "point"
+
+liste_caracteres = list(string.digits) + [",","."]
+class StrPerso:
+    ## constructeur d'initialisation
+    def __init__(self,chaine):
+        liste_chaine = list(chaine)
+        ## vérifier si dans "chaine", il existe un caractère interdit parmi la liste des caratères "liste_caracteres"
+        for c in liste_chaine:
+            if c in liste_caracteres:
+                print("L'instance créée ne doit contenir que des lettres alphabétiques:")
+                print(f"le caractère \"{c}\" sera supprimé")
+                chaine = chaine.replace(c, "")
+        self.chaine = chaine
+
+    def __add__(self, nouvelle_chaine):
+        if nouvelle_chaine in liste_caracteres:
+            return f"Vous ne pouvez pas ajouter de \"{nouvelle_chaine}\" à la chaine"
+        else:
+            self.chaine += nouvelle_chaine
+
+        return self.chaine
+    
+chaine1 = StrPerso("Bon,jour")
+chaine1 + ","
+chaine1 + "."
+chaine2 = chaine1 + " ça va"
+chaine2
