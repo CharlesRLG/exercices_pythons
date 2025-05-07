@@ -1353,32 +1353,52 @@
 
 # Exercice 97: Classe string personnalisé
 
-import string
+#import string
 ## Listing de tous les chiffres de 0 à 9 + ajout des caractères "virgule" et "point"
 
-liste_caracteres = list(string.digits) + [",","."]
-class StrPerso:
+#liste_caracteres = list(string.digits) + [",","."]
+#class StrPerso:
     ## constructeur d'initialisation
-    def __init__(self,chaine):
-        liste_chaine = list(chaine)
+    #def __init__(self,chaine):
+        #liste_chaine = list(chaine)
         ## vérifier si dans "chaine", il existe un caractère interdit parmi la liste des caratères "liste_caracteres"
-        for c in liste_chaine:
-            if c in liste_caracteres:
-                print("L'instance créée ne doit contenir que des lettres alphabétiques:")
-                print(f"le caractère \"{c}\" sera supprimé")
-                chaine = chaine.replace(c, "")
-        self.chaine = chaine
+        #for c in liste_chaine:
+            #if c in liste_caracteres:
+                #print("L'instance créée ne doit contenir que des lettres alphabétiques:")
+                #print(f"le caractère \"{c}\" sera supprimé")
+                #chaine = chaine.replace(c, "")
+        #self.chaine = chaine
 
-    def __add__(self, nouvelle_chaine):
-        if nouvelle_chaine in liste_caracteres:
-            return f"Vous ne pouvez pas ajouter de \"{nouvelle_chaine}\" à la chaine"
-        else:
-            self.chaine += nouvelle_chaine
+    #def __add__(self, nouvelle_chaine):
+        #if nouvelle_chaine in liste_caracteres:
+            #return f"Vous ne pouvez pas ajouter de \"{nouvelle_chaine}\" à la chaine"
+        #else:
+            #self.chaine += nouvelle_chaine
 
-        return self.chaine
+        #return self.chaine
     
-chaine1 = StrPerso("Bon,jour")
-chaine1 + ","
-chaine1 + "."
-chaine2 = chaine1 + " ça va"
-chaine2
+#chaine1 = StrPerso("Bon,jour")
+#chaine1 + ","
+#chaine1 + "."
+#chaine2 = chaine1 + " ça va"
+#chaine2
+
+## Exercice 98: Ordonner un dictionnaire suivant la clé
+
+def ordonnerDict(d):
+    ## Liste qui va contenir les tuples
+    liste_tuple = []
+    ## liste des clé du dictionnaire
+    cle_d = list(d.keys())
+    ## liste des valeurs
+    valeur_d = list(d.values())
+    ## boucler sur (cle,valeur)
+    for cle,valeurs in zip(cle_d,valeur_d):
+        ## ajouter le tuple dans la liste
+        liste_tuple.append((cle,valeurs))
+        ## ordonner dans un ordre croissant suivant le premier élément du tuple
+        liste_tuple.sort(key = lambda x : x[0])
+        ## retourner un dictionnaire
+        return dict(liste_tuple)
+    
+print(ordonnerDict({8:9,2:3,9:11,7:33,11:48}))
