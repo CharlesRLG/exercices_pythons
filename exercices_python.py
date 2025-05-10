@@ -1385,20 +1385,46 @@
 
 ## Exercice 98: Ordonner un dictionnaire suivant la clé
 
-def ordonnerDict(d):
+#def ordonnerDict(d):
     ## Liste qui va contenir les tuples
-    liste_tuple = []
+    #liste_tuple = []
     ## liste des clé du dictionnaire
-    cle_d = list(d.keys())
+    #cle_d = list(d.keys())
     ## liste des valeurs
-    valeur_d = list(d.values())
+    #valeur_d = list(d.values())
     ## boucler sur (cle,valeur)
-    for cle,valeurs in zip(cle_d,valeur_d):
+    #for cle,valeurs in zip(cle_d,valeur_d):
         ## ajouter le tuple dans la liste
-        liste_tuple.append((cle,valeurs))
+        #liste_tuple.append((cle,valeurs))
         ## ordonner dans un ordre croissant suivant le premier élément du tuple
-        liste_tuple.sort(key = lambda x : x[0])
+        #liste_tuple.sort(key = lambda x : x[0])
         ## retourner un dictionnaire
-        return dict(liste_tuple)
+        #return dict(liste_tuple)
     
-print(ordonnerDict({8:9,2:3,9:11,7:33,11:48}))
+#print(ordonnerDict({8:9,2:3,9:11,7:33,11:48}))
+
+## Exercice 99: La some maximale d'une sous liste
+def SommeSeq(L,i,j):
+    Lij = L[i:j+1]
+    return sum(Lij)
+
+def plusGrandSomme(L):
+    ## initialisation var somme_max avec le premier élément de la liste L
+    somme_max = L[0]
+    ## parcourir les index de L
+    for i in range(len(L)):
+        ## parcourir les index de L en partant de i
+        for j in range(i, len(L)):
+            ## appel de fonction pour sommer la sequence de i à j 
+            s = SommeSeq(L, i, j)
+            ## si la somme trouver est supérieur à celle que nous avons initialisé
+            if s > somme_max:
+                ## enregistrer la sequence trouvé dans une variable
+                seq = L[i:j+1]
+                ## changer le contenu de somme_max avec le contenu de la nouvelle variable s
+                somme_max = s
+
+    return somme_max,seq
+
+print(plusGrandSomme([-8,-4,6,8,-6,10,-4,-4]))
+print(plusGrandSomme([-6,-1,8,-7,1,9,-1,2]))
