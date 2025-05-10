@@ -1404,27 +1404,41 @@
 #print(ordonnerDict({8:9,2:3,9:11,7:33,11:48}))
 
 ## Exercice 99: La some maximale d'une sous liste
-def SommeSeq(L,i,j):
-    Lij = L[i:j+1]
-    return sum(Lij)
+#def SommeSeq(L,i,j):
+    #Lij = L[i:j+1]
+    #return sum(Lij)
 
-def plusGrandSomme(L):
+#def plusGrandSomme(L):
     ## initialisation var somme_max avec le premier élément de la liste L
-    somme_max = L[0]
+    #somme_max = L[0]
     ## parcourir les index de L
-    for i in range(len(L)):
+    #for i in range(len(L)):
         ## parcourir les index de L en partant de i
-        for j in range(i, len(L)):
+        #for j in range(i, len(L)):
             ## appel de fonction pour sommer la sequence de i à j 
-            s = SommeSeq(L, i, j)
+            #s = SommeSeq(L, i, j)
             ## si la somme trouver est supérieur à celle que nous avons initialisé
-            if s > somme_max:
+            #if s > somme_max:
                 ## enregistrer la sequence trouvé dans une variable
-                seq = L[i:j+1]
+                #seq = L[i:j+1]
                 ## changer le contenu de somme_max avec le contenu de la nouvelle variable s
-                somme_max = s
+                #somme_max = s
 
-    return somme_max,seq
+    #return somme_max,seq
 
-print(plusGrandSomme([-8,-4,6,8,-6,10,-4,-4]))
-print(plusGrandSomme([-6,-1,8,-7,1,9,-1,2]))
+#print(plusGrandSomme([-8,-4,6,8,-6,10,-4,-4]))
+#print(plusGrandSomme([-6,-1,8,-7,1,9,-1,2]))
+
+## Exercice 100: Séparer les éléments 0 et 1
+
+def separerElt(L):
+    ## nombre de 0 dans L
+    nbr_0 = L.count(0)
+    ## nombre de 1 dans L
+    nbr_1 = L.count(1)
+    ## créer une nouvelle liste avec les mêmes nombres
+    L1 = [0] * nbr_0 + [1] * nbr_1
+    return L1
+
+print(separerElt([0,1,0,1,1,0,0,1,0,1]))
+print(separerElt([1,0,0,0,1,0,1,1,1,0,1,1,0,0,0,1]))
